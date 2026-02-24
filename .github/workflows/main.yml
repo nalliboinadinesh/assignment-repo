@@ -38,6 +38,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /home/ubuntu/your-project-folder
+            cd /home/ubuntu/assignment-repo
             docker compose pull
             docker compose up -d --no-deps
