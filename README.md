@@ -1,15 +1,15 @@
-# 🚀 Zero Downtime MEAN Stack Deployment using Docker, Nginx & GitHub Actions CI/CD
+# MEAN Stack Deployment using Docker, Nginx & GitHub Actions CI/CD
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project demonstrates the **Zero Downtime Deployment** of a full-stack MEAN (MongoDB, Express, Angular, Node.js) application using:
 
-* 🐳 Docker & Docker Compose
-* 🌐 Nginx Reverse Proxy
-* ⚙️ GitHub Actions CI/CD
-* ☁️ Cloud-based Ubuntu Server
+* Docker & Docker Compose
+* Nginx Reverse Proxy
+* GitHub Actions CI/CD
+* Cloud-based Ubuntu Server
 
 The CI/CD pipeline automates:
 
@@ -20,7 +20,7 @@ The CI/CD pipeline automates:
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 ```
 GitHub Push → GitHub Actions → DockerHub
@@ -34,7 +34,7 @@ GitHub Push → GitHub Actions → DockerHub
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 assignment-repo/
@@ -54,11 +54,11 @@ assignment-repo/
 
 ---
 
-# 🐳 Docker Configuration
+# Docker Configuration
 
 ---
 
-## 🔹 Backend Dockerfile
+## Backend Dockerfile
 
 ```dockerfile
 FROM node:18
@@ -78,7 +78,7 @@ CMD ["npm", "start"]
 
 ---
 
-## 🔹 Frontend Dockerfile
+## Frontend Dockerfile
 
 ```dockerfile
 FROM nginx:alpine
@@ -90,11 +90,11 @@ EXPOSE 80
 
 ---
 
-# ⚙️ Docker Compose Configuration
+# Docker Compose Configuration
 
 ---
 
-## 🔹 docker-compose.yml
+## docker-compose.yml
 
 ```yaml
 services:
@@ -131,11 +131,11 @@ volumes:
 
 ---
 
-# 🌐 Nginx Configuration
+# Nginx Configuration
 
 ---
 
-## 🔹 nginx.conf
+## nginx.conf
 
 ```nginx
 server {
@@ -153,11 +153,11 @@ server {
 
 ---
 
-# 🔄 CI/CD Configuration
+# CI/CD Configuration
 
 ---
 
-## 🔹 GitHub Actions Workflow
+## GitHub Actions Workflow
 
 Path:
 
@@ -213,7 +213,7 @@ jobs:
 
 ---
 
-# 🖥️ Server Setup Instructions
+# Server Setup Instructions
 
 ---
 
@@ -258,18 +258,18 @@ Image while composing time ..
 
 ---
 
-## 🔹 1. GitHub Actions CI/CD Execution
+## 1. GitHub Actions CI/CD Execution
 
 ![work-flow-execution](image-2.png)
 
 
-## 🔹 2. DockerHub Images
+## 2. DockerHub Images
 
 ![Docker-Hub](image-3.png)
 
 ---
 
-## 🔹 3. Running Containers
+## 3. Running Containers
 
 ```bash
 docker ps
@@ -278,7 +278,7 @@ docker ps
 
 ---
 
-## 🔹 4. Application UI in Browser
+## 4. Application UI in Browser
 
 Visit:
 
@@ -291,7 +291,7 @@ http://13.234.7.247
 
 ---
 
-## 🔹 5. Nginx Infrastructure
+## 5. Nginx Infrastructure
 
 ```bash
 docker logs nginx
@@ -303,7 +303,7 @@ docker logs nginx
 
 ---
 
-# 🎯 Zero Downtime Strategy
+# Zero Downtime Strategy
 
 * MongoDB container is never restarted
 * Backend & Frontend containers are force recreated
@@ -314,8 +314,4 @@ Ensuring uninterrupted application availability.
 
 ---
 
-# ✅ Conclusion
 
-This project successfully implements a **Zero Downtime Deployment Strategy** using Docker, Nginx, and GitHub Actions CI/CD for a MEAN stack application.
-
----
