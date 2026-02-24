@@ -1,3 +1,44 @@
+# version: "3"
+
+# services:
+
+#   mongodb:
+#     image: mongo
+#     container_name: mongo
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo-data:/data/db
+
+#   backend:
+#     build: ./backend
+#     container_name: backend
+#     ports:
+#       - "8080:8080"
+#     depends_on:
+#       - mongodb
+#     environment:
+#       - MONGO_URI=mongodb://mongodb:27017/mydb
+
+#   frontend:
+#     build: ./frontend
+#     container_name: frontend
+#     depends_on:
+#       - backend
+
+#   nginx:
+#     image: nginx
+#     container_name: nginx
+#     ports:
+#       - "80:80"
+#     volumes:
+#       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+#     depends_on:
+#       - frontend
+#       - backend
+
+# volumes:
+#   mongo-data:
 version: "3"
 
 services:
@@ -11,7 +52,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    build: ./backend
+    image: 756958/backend:latest
     container_name: backend
     ports:
       - "8080:8080"
@@ -21,7 +62,7 @@ services:
       - MONGO_URI=mongodb://mongodb:27017/mydb
 
   frontend:
-    build: ./frontend
+    image: 756958/frontend:latest
     container_name: frontend
     depends_on:
       - backend
