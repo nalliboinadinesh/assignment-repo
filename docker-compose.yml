@@ -39,6 +39,9 @@
 
 # volumes:
 #   mongo-data:
+
+# Change the above to use pre-built images from Docker Hub for zero downtime deployment
+
 version: "3"
 
 services:
