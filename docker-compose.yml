@@ -1,3 +1,5 @@
+version: "3"
+
 services:
 
   mongodb:
@@ -9,7 +11,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    image: 756958/backend:latest
+    build: ./backend
     container_name: backend
     ports:
       - "8080:8080"
@@ -19,7 +21,7 @@ services:
       - MONGO_URI=mongodb://mongodb:27017/mydb
 
   frontend:
-    image: 756958/frontend:latest
+    build: ./frontend
     container_name: frontend
     depends_on:
       - backend
@@ -37,3 +39,4 @@ services:
 
 volumes:
   mongo-data:
+
